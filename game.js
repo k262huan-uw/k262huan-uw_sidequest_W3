@@ -68,20 +68,13 @@ function drawGameButton({ x, y, w, h, label }) {
 
   noStroke();
 
-  // Change button colour when hovered
+  // same colour as the background but with a different opacity
+  let buttonCol = color(red(randonBg), green(randomBg), blue(randomBg), 180);
   // This gives visual feedback to the player
-  fill(
-    color(200, 220, 255, 190), // normal state
-  );
+  fill(buttonCol);
 
   // Draw the button rectangle
   rect(x, y, w, h, 14); // last value = rounded corners
-
-  // Draw the button text
-  fill(0);
-  textSize(28);
-  textAlign(CENTER, CENTER);
-  text(label, x, y);
 }
 
 // ------------------------------
