@@ -56,7 +56,6 @@ function draw() {
   else if (currentScreen === "game") {
     drawGame();
   } else if (!buttonOnce) {
-    background(random(150, 255), (150, 255), (150, 255));
     randomButton();
   } else if (currentScreen === "win") drawWin();
   else if (currentScreen === "lose") drawLose();
@@ -84,6 +83,8 @@ function mousePressed() {
   else if (currentScreen === "instr") instrMousePressed();
   else if (currentScreen === "game") {
     gameMousePressed();
+    background(random(150, 255), (150, 255), (150, 255));
+    randomButton();
   }
   // The ?.() means “call this function only if it exists”
   // This prevents errors if a screen doesn’t implement a handler.
