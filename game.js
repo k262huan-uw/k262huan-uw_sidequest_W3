@@ -102,7 +102,7 @@ function gameMousePressed() {
     randomButton(); // randomizes button position once mouse is clicked
     randomBg = color(random(0, 255), random(0, 255), random(0, 255)); // randomizes background colour once the button is pressed
 
-    if ((buttonClicks = maxClicks)) {
+    if ((buttonClicks = winClicks)) {
       currentScreen = "win";
       totalClicks = 0;
       buttonClicks = 0;
