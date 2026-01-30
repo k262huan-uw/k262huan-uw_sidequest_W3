@@ -130,6 +130,6 @@ function triggerRandomOutcome() {
 function randomButton() {
   gameBtn.w = random(20, 200); // random button width
   gameBtn.h = random(20, 200); // random button height
-  gameBtn.x = random(gameBtn.w / 2, gameBtn.w / 2); // random x position
-  gameBtn.y = random(gameBtn.h / 2, gameBtn.h / 2); // random y position
+  gameBtn.x = random(gameBtn.w / 2, width - gameBtn.w / 2); // random x position
+  gameBtn.y = random(gameBtn.h / 2, height - gameBtn.h / 2); // random y position
 }
