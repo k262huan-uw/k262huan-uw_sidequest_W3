@@ -15,10 +15,10 @@
 const gameBtn = {
   w: random(5, 20), // width
   h: random(5, 20), // height
-  x: random(gameBtn.w / 2, 800 - gameBtn.w / 2), // x position (centre of the button)
-  y: random(gameBtn.h / 2, 800 - gameBtn.h / 2), // y position (centre of the button)
   label: "PRESS HERE",
 };
+gameBtn.x = random(gameBtn.w / 2, 800 - gameBtn.w / 2);
+gameBtn.x = random(gameBtn.h / 2, 800 - gameBtn.h / 2);
 
 // ------------------------------
 // Main draw function for this screen
