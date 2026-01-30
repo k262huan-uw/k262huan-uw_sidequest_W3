@@ -13,8 +13,8 @@
 // Keeping this in one object makes it easier to move,
 // resize, or restyle the button later.
 const gameBtn = {
-  w: random(5, 20), // width
-  h: random(5, 20), // height
+  w: random(40, 80), // width
+  h: random(40, 80), // height
   label: "PRESS HERE",
 };
 gameBtn.x = random(gameBtn.w / 2, 800 - gameBtn.w / 2);
@@ -62,7 +62,6 @@ function drawGameButton({ x, y, w, h, label }) {
 
   noStroke();
 
-  // Change button colour when hovered
   // This gives visual feedback to the player
   fill(
     color(200, 220, 255, 190), // normal state
