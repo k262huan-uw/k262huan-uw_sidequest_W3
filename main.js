@@ -50,10 +50,8 @@ function draw() {
 
   if (currentScreen === "start") drawStart();
   else if (currentScreen === "instr") drawInstr();
-  else if (currentScreen === "game") {
-    drawGame();
-    randomButton();
-  } else if (currentScreen === "win") drawWin();
+  else if (currentScreen === "game") drawGame();
+  else if (currentScreen === "win") drawWin();
   else if (currentScreen === "lose") drawLose();
 
   // (Optional teaching note)
@@ -77,7 +75,10 @@ function mousePressed() {
 
   if (currentScreen === "start") startMousePressed();
   else if (currentScreen === "instr") instrMousePressed();
-  else if (currentScreen === "game") gameMousePressed();
+  else if (currentScreen === "game") {
+    gameMousePressed();
+    randomButton();
+  }
   // The ?.() means “call this function only if it exists”
   // This prevents errors if a screen doesn’t implement a handler.
   else if (currentScreen === "win") winMousePressed?.();
