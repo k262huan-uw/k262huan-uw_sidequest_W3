@@ -33,14 +33,10 @@ function drawGame() {
   fill(0); // black text
   textSize(32);
   textAlign(CENTER, CENTER);
-  text("Game Screen", width / 2, 160);
+  text("Find Me", width / 2, 160);
 
   textSize(18);
-  text(
-    "Click the button (or press ENTER) for a random result.",
-    width / 2,
-    210,
-  );
+  text("Find the hidden button to move on to the next level.", width / 2, 210);
 
   // ---- Draw the button ----
   // We pass the button object to a helper function
@@ -69,9 +65,7 @@ function drawGameButton({ x, y, w, h, label }) {
   // Change button colour when hovered
   // This gives visual feedback to the player
   fill(
-    hover
-      ? color(180, 220, 255, 220) // lighter blue on hover
-      : color(200, 220, 255, 190), // normal state
+    color(200, 220, 255, 190), // normal state
   );
 
   // Draw the button rectangle
