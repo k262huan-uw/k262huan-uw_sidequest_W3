@@ -17,7 +17,6 @@ const gameBtn = {
   y: 550, // y position (centre of the button)
   w: 260, // width
   h: 90, // height
-  label: "PRESS HERE", // text shown on the button
 };
 
 // ------------------------------
@@ -128,8 +127,8 @@ function triggerRandomOutcome() {
 }
 
 function randomButton() {
-  gameBtn.w = random(20, 200); // random button width
-  gameBtn.h = random(20, 200); // random button height
+  gameBtn.w = random(5, 150); // random button width
+  gameBtn.h = random(5, 150); // random button height
   gameBtn.x = random(gameBtn.w / 2, width - gameBtn.w / 2); // random x position
   gameBtn.y = random(gameBtn.h / 2, height - gameBtn.h / 2); // random y position
 }
