@@ -13,8 +13,8 @@
 // Keeping this in one object makes it easier to move,
 // resize, or restyle the button later.
 const gameBtn = {
-  x: 20,
-  y: 30,
+  x: 400,
+  y: 550,
   w: random(40, 80), // width
   h: random(40, 80), // height
   label: "PRESS HERE",
