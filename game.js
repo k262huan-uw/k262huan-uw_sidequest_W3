@@ -70,9 +70,9 @@ function drawGameButton({ x, y, w, h, label }) {
 
   // same colour as the background but with a different opacity
   let buttonCol = color(
-    red(randomBg * 0.5),
-    green(randomBg * 0.5),
-    blue(randomBg * 0.5),
+    red(randomBg) * 0.5,
+    green(randomBg) * 0.5,
+    blue(randomBg) * 0.5,
     115,
   );
   // This gives visual feedback to the player
