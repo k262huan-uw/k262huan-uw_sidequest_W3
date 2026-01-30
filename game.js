@@ -18,7 +18,7 @@ const gameBtn = {
   label: "PRESS HERE",
 };
 gameBtn.x = random(gameBtn.w / 2, 800 - gameBtn.w / 2);
-gameBtn.x = random(gameBtn.h / 2, 800 - gameBtn.h / 2);
+gameBtn.y = random(gameBtn.h / 2, 800 - gameBtn.h / 2);
 
 // ------------------------------
 // Main draw function for this screen
