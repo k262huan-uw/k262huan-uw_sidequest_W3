@@ -81,7 +81,10 @@ function mousePressed() {
 
   if (currentScreen === "start") startMousePressed();
   else if (currentScreen === "instr") instrMousePressed();
-  else if (currentScreen === "game") gameMousePressed();
+  else if (currentScreen === "game") {
+    gameMousePressed();
+    background(random(150, 255), (150, 255), (150, 255));
+  }
   // The ?.() means “call this function only if it exists”
   // This prevents errors if a screen doesn’t implement a handler.
   else if (currentScreen === "win") winMousePressed?.();
