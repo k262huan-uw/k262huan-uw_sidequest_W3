@@ -91,7 +91,8 @@ function drawGameButton({ x, y, w, h, label }) {
 function gameMousePressed() {
   // Only trigger the outcome if the button is clicked
   if (isHover(gameBtn)) {
-    triggerRandomOutcome();
+    randomButton();
+    background(random(150, 255), (150, 255), (150, 255));
   }
 }
 
@@ -103,8 +104,6 @@ function gameKeyPressed() {
   // ENTER key triggers the same behaviour as clicking the button
   if (keyCode === ENTER) {
     triggerRandomOutcome();
-    randomButton();
-    background(random(150, 255), (150, 255), (150, 255));
   }
 }
 
