@@ -68,7 +68,7 @@ function drawGameButton({ x, y, w, h, label }) {
 
   noStroke();
 
-  // same colour as the background but with a different opacity
+  // matches the background colour to the button colour but with a different opacity
   let buttonCol = color(
     red(randomBg) * 0.5,
     green(randomBg) * 0.5,
@@ -85,13 +85,28 @@ function drawGameButton({ x, y, w, h, label }) {
 // ------------------------------
 // Mouse input for this screen
 // ------------------------------
+
+let buttonClicks = 0; // counts button clicks
+let totalClicks = 0; // counts the total amount of clicks
+let winClicks = 10; // need 10 button clicks to win
+let maxClicks = 25; // if clicks go above 25 than the player loses
+
 // This function is called from main.js
 // only when currentScreen === "game"
 function gameMousePressed() {
+  totalClicks++;
+
   // Only trigger the outcome if the button is clicked
   if (isHover(gameBtn)) {
+    buttonClicks++;
     randomButton(); // randomizes button position once mouse is clicked
     randomBg = color(random(0, 255), random(0, 255), random(0, 255)); // randomizes background colour once the button is pressed
+
+    if ((buttonClicks = maxClicks)) {
+      currentScreen = "win";
+      totalClicks = 0;
+      buttonClicks = 0;
+    }
   }
 }
 
