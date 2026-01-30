@@ -41,6 +41,30 @@ function setup() {
 // This is the core “router” for visuals.
 // Depending on currentScreen, we call the correct draw function.
 
+// ------------------------------
+// mousePressed() runs once each time the mouse is clicked
+// ------------------------------
+// This routes mouse input to the correct screen handler.
+function mousePressed() {
+  // Each screen *may* define a mouse handler:
+  // start.js         → startMousePressed()
+  // instructions.js  → instrMousePressed()
+  // game.js          → gameMousePressed()
+  // win.js           → winMousePressed()
+  // lose.js          → loseMousePressed()
+
+  if (currentScreen === "start") startMousePressed();
+  else if (currentScreen === "instr") instrMousePressed();
+  else if (currentScreen === "game") {
+    gameMousePressed();
+    background(random(150, 255), (150, 255), (150, 255));
+  }
+  // The ?.() means “call this function only if it exists”
+  // This prevents errors if a screen doesn’t implement a handler.
+  else if (currentScreen === "win") winMousePressed?.();
+  else if (currentScreen === "lose") loseMousePressed?.();
+}
+
 let buttonOnce = false;
 
 function draw() {
@@ -65,30 +89,6 @@ function draw() {
   // Later in the course you might replace it with:
   // - a switch statement, or
   // - an object/map of screens
-}
-
-// ------------------------------
-// mousePressed() runs once each time the mouse is clicked
-// ------------------------------
-// This routes mouse input to the correct screen handler.
-function mousePressed() {
-  // Each screen *may* define a mouse handler:
-  // start.js         → startMousePressed()
-  // instructions.js  → instrMousePressed()
-  // game.js          → gameMousePressed()
-  // win.js           → winMousePressed()
-  // lose.js          → loseMousePressed()
-
-  if (currentScreen === "start") startMousePressed();
-  else if (currentScreen === "instr") instrMousePressed();
-  else if (currentScreen === "game") {
-    gameMousePressed();
-    background(random(150, 255), (150, 255), (150, 255));
-  }
-  // The ?.() means “call this function only if it exists”
-  // This prevents errors if a screen doesn’t implement a handler.
-  else if (currentScreen === "win") winMousePressed?.();
-  else if (currentScreen === "lose") loseMousePressed?.();
 }
 
 // ------------------------------
