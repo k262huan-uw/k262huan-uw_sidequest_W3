@@ -73,7 +73,7 @@ function drawGameButton({ x, y, w, h, label }) {
     red(randomBg) * 0.5,
     green(randomBg) * 0.5,
     blue(randomBg) * 0.5,
-    30,
+    10,
   );
   // This gives visual feedback to the player
   fill(buttonCol);
