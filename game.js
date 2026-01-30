@@ -13,10 +13,10 @@
 // Keeping this in one object makes it easier to move,
 // resize, or restyle the button later.
 const gameBtn = {
-  x: random(w / 2, width - w / 2), // x position (centre of the button)
-  y: random(h / 2, height - h / 2), // y position (centre of the button)
-  w: random(20, 260), // width
-  h: random(20, 90), // height
+  x: 400, // x position (centre of the button)
+  y: 550, // y position (centre of the button)
+  w: 260, // width
+  h: 90, // height
   label: "PRESS HERE", // text shown on the button
 };
 
@@ -125,4 +125,11 @@ function triggerRandomOutcome() {
   } else {
     currentScreen = "lose";
   }
+}
+
+function randomButton() {
+  gameBtn.w = random(20, 200); // random button width
+  gameBtn.h = random(20, 200); // random button height
+  gameBtn.x = random(gameBtn.w / 2, gameBtn.w / 2); // random x position
+  gameBtn.y = random(gameBtn.h / 2, gameBtn.h / 2); // random y position
 }
