@@ -103,6 +103,8 @@ function gameKeyPressed() {
   // ENTER key triggers the same behaviour as clicking the button
   if (keyCode === ENTER) {
     triggerRandomOutcome();
+    randomButton();
+    background(random(150, 255), (150, 255), (150, 255));
   }
 }
 
