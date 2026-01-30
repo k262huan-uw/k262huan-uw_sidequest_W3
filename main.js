@@ -41,6 +41,33 @@ function setup() {
 // This is the core “router” for visuals.
 // Depending on currentScreen, we call the correct draw function.
 
+let buttonOnce = false;
+
+function draw() {
+  // Each screen file defines its own draw function:
+  //   start.js         → drawStart()
+  //   instructions.js  → drawInstr()
+  //   game.js          → drawGame()
+  //   win.js           → drawWin()
+  //   lose.js          → drawLose()
+
+  if (currentScreen === "start") drawStart();
+  else if (currentScreen === "instr") drawInstr();
+  else if (currentScreen === "game") {
+    drawGame();
+  } else if (!buttonOnce) {
+    background(random(150, 255), (150, 255), (150, 255));
+    randomButton();
+  } else if (currentScreen === "win") drawWin();
+  else if (currentScreen === "lose") drawLose();
+
+  // (Optional teaching note)
+  // This “if/else chain” is a very common early approach.
+  // Later in the course you might replace it with:
+  // - a switch statement, or
+  // - an object/map of screens
+}
+
 // ------------------------------
 // mousePressed() runs once each time the mouse is clicked
 // ------------------------------
@@ -57,38 +84,11 @@ function mousePressed() {
   else if (currentScreen === "instr") instrMousePressed();
   else if (currentScreen === "game") {
     gameMousePressed();
-    background(random(150, 255), (150, 255), (150, 255));
   }
   // The ?.() means “call this function only if it exists”
   // This prevents errors if a screen doesn’t implement a handler.
   else if (currentScreen === "win") winMousePressed?.();
   else if (currentScreen === "lose") loseMousePressed?.();
-}
-
-let buttonOnce = false;
-
-function draw() {
-  // Each screen file defines its own draw function:
-  //   start.js         → drawStart()
-  //   instructions.js  → drawInstr()
-  //   game.js          → drawGame()
-  //   win.js           → drawWin()
-  //   lose.js          → drawLose()
-
-  if (currentScreen === "start") drawStart();
-  else if (currentScreen === "instr") drawInstr();
-  else if (currentScreen === "game") {
-    drawGame();
-  } else if (!buttonOnce) {
-    randomButton();
-  } else if (currentScreen === "win") drawWin();
-  else if (currentScreen === "lose") drawLose();
-
-  // (Optional teaching note)
-  // This “if/else chain” is a very common early approach.
-  // Later in the course you might replace it with:
-  // - a switch statement, or
-  // - an object/map of screens
 }
 
 // ------------------------------
