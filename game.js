@@ -15,7 +15,7 @@
 const gameBtn = {
   x: 400, // x position (centre of the button)
   y: 550, // y position (centre of the button)
-  w: 260, // width
+  w: random(260), // width
   h: 90, // height
   label: "PRESS HERE", // text shown on the button
 };
