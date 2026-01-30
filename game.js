@@ -108,6 +108,12 @@ function gameMousePressed() {
       buttonClicks = 0;
     }
   }
+
+  if (totalClicks > maxClicks) {
+    currentScreen = "lose";
+    totalClicks = 0;
+    buttonClicks = 0;
+  }
 }
 
 // ------------------------------
