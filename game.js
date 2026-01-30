@@ -71,9 +71,7 @@ function drawGameButton({ x, y, w, h, label }) {
   // Change button colour when hovered
   // This gives visual feedback to the player
   fill(
-    hover
-      ? color(180, 220, 255, 220) // lighter blue on hover
-      : color(200, 220, 255, 190), // normal state
+    color(200, 220, 255, 190), // normal state
   );
 
   // Draw the button rectangle
