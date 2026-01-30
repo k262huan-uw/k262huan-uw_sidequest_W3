@@ -95,7 +95,7 @@ function gameMousePressed() {
   // Only trigger the outcome if the button is clicked
   if (isHover(gameBtn)) {
     randomButton(); // randomizes button position once mouse is clicked
-    randomBg = color(random(150, 250), (150, 250), (150, 250)); // randomizes background colour once the button is pressed
+    randomBg = color(random(0, 255), (0, 255), (0, 255)); // randomizes background colour once the button is pressed
   }
 }
 
