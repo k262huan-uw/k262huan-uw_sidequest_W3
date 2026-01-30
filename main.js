@@ -53,12 +53,8 @@ function draw() {
 
   if (currentScreen === "start") drawStart();
   else if (currentScreen === "instr") drawInstr();
-  else if (currentScreen === "game") {
-    drawGame();
-  } else if (!buttonOnce) {
-    // draws button once
-    randomButton();
-  } else if (currentScreen === "win") drawWin();
+  else if (currentScreen === "game") drawGame();
+  else if (currentScreen === "win") drawWin();
   else if (currentScreen === "lose") drawLose();
 
   // (Optional teaching note)

@@ -24,9 +24,12 @@ const gameBtn = {
 // ------------------------------
 // drawGame() is called from main.js *only*
 // when currentScreen === "game"
+
+let randomBg = (240, 230, 140);
+
 function drawGame() {
   // Set background colour for the game screen
-  background(240, 230, 140);
+  background(randomBg);
 
   // ---- Title and instructions text ----
   fill(0); // black text
@@ -91,8 +94,8 @@ function drawGameButton({ x, y, w, h, label }) {
 function gameMousePressed() {
   // Only trigger the outcome if the button is clicked
   if (isHover(gameBtn)) {
-    randomButton();
-    background(random(150, 255), (150, 255), (150, 255));
+    randomButton(); // randomizes button position once mouse is clicked
+    randomBg = color(random(150, 250), (150, 250), (150, 250)); // randomizes background colour once the button is pressed
   }
 }
 
