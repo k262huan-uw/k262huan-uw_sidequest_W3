@@ -17,6 +17,7 @@ const gameBtn = {
   y: random(gameBtn.h / 2, 800 - gameBtn.h / 2), // y position (centre of the button)
   w: random(5, 20), // width
   h: random(5, 20), // height
+  label: "PRESS HERE",
 };
 
 // ------------------------------
