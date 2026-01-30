@@ -13,12 +13,12 @@
 // Keeping this in one object makes it easier to move,
 // resize, or restyle the button later.
 const gameBtn = {
+  x: 20,
+  y: 30,
   w: random(40, 80), // width
   h: random(40, 80), // height
   label: "PRESS HERE",
 };
-gameBtn.x = random(gameBtn.w / 2, 800 - gameBtn.w / 2);
-gameBtn.y = random(gameBtn.h / 2, 800 - gameBtn.h / 2);
 
 // ------------------------------
 // Main draw function for this screen
