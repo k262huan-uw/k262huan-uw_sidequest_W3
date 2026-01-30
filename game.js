@@ -13,11 +13,11 @@
 // Keeping this in one object makes it easier to move,
 // resize, or restyle the button later.
 const gameBtn = {
-  x: 400,
-  y: 550,
-  w: random(40, 80), // width
-  h: random(40, 80), // height
-  label: "PRESS HERE",
+  x: 400, // x position (centre of the button)
+  y: 550, // y position (centre of the button)
+  w: random(30, 260), // width
+  h: 90, // height
+  label: "PRESS HERE", // text shown on the button
 };
 
 // ------------------------------
@@ -33,10 +33,14 @@ function drawGame() {
   fill(0); // black text
   textSize(32);
   textAlign(CENTER, CENTER);
-  text("Find Me", width / 2, 160);
+  text("Game Screen", width / 2, 160);
 
   textSize(18);
-  text("Find the hidden button to move on to the next level.", width / 2, 210);
+  text(
+    "Click the button (or press ENTER) for a random result.",
+    width / 2,
+    210,
+  );
 
   // ---- Draw the button ----
   // We pass the button object to a helper function
@@ -62,9 +66,12 @@ function drawGameButton({ x, y, w, h, label }) {
 
   noStroke();
 
+  // Change button colour when hovered
   // This gives visual feedback to the player
   fill(
-    color(200, 220, 255, 190), // normal state
+    hover
+      ? color(180, 220, 255, 220) // lighter blue on hover
+      : color(200, 220, 255, 190), // normal state
   );
 
   // Draw the button rectangle
