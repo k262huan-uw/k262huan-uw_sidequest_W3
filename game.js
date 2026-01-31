@@ -28,7 +28,7 @@ const gameBtn = {
 let randomBg = (240, 230, 140);
 let levelText = false;
 let titleEasy = true;
-let titleMedium = true;
+let titleMedium = false;
 
 function drawGame() {
   // Set background colour for the game screen
