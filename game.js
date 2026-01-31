@@ -32,7 +32,7 @@ let titleHard = false;
 let ladder;
 
 function preload() {
-  ladder = loadImage("ladder.png");
+  ladder = loadImage("libraries/images/ladder.png");
 }
 
 function drawGame() {
