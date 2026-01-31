@@ -55,12 +55,18 @@ function draw() {
   //   start.js         → drawStart()
   //   instructions.js  → drawInstr()
   //   game.js          → drawGame()
+  //   easy.js          → drawEasy()
+  //   medium.js        → drawMedium()
+  //   hard.js          → drawHard()
   //   win.js           → drawWin()
   //   lose.js          → drawLose()
 
   if (currentScreen === "start") drawStart();
   else if (currentScreen === "instr") drawInstr();
   else if (currentScreen === "game") drawGame();
+  else if (currentScreen === "easy") drawEasy();
+  else if (currentScreen === "medium") drawMedium();
+  else if (currentScreen === "hard") drawhard();
   else if (currentScreen === "win") drawWin();
   else if (currentScreen === "lose") drawLose();
 
@@ -86,6 +92,9 @@ function mousePressed() {
   if (currentScreen === "start") startMousePressed();
   else if (currentScreen === "instr") instrMousePressed();
   else if (currentScreen === "game") gameMousePressed();
+  else if (currentScreen === "easy") easyMousePressed();
+  else if (currentScreen === "medium") mediumMousePressed();
+  else if (currentScreen === "hard") hardMousePressed();
   // The ?.() means “call this function only if it exists”
   // This prevents errors if a screen doesn’t implement a handler.
   else if (currentScreen === "win") winMousePressed?.();
