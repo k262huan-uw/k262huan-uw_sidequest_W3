@@ -10,7 +10,7 @@ function drawHard() {
   textSize(18);
   text("Look for the crown to find...", width / 2, 210);
 
-  image(crownImg, 10, 280, 20, 20);
+  image(crownImg, 200, 280, 50, 50);
 }
 
 function hardMousePressed() {
