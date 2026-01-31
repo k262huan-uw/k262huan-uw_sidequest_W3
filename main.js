@@ -27,6 +27,13 @@ let currentScreen = "start"; // "start" | "instr" | "game" | "win" | "lose"
 // setup() runs ONCE at the beginning
 // ------------------------------
 // This is where you usually set canvas size and initial settings.
+
+let ladderImg;
+
+function preload() {
+  ladderImg = loadImage("libraries/images/ladder.png");
+}
+
 function setup() {
   createCanvas(800, 800);
 
