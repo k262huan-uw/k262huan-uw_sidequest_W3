@@ -38,6 +38,8 @@ function drawGame() {
   // ---- Title and instructions text ----
 
   if (titleEasy) {
+    let titleMedium = false;
+    let titleHard = false;
     fill(0); // black text
     textSize(32);
     textAlign(CENTER, CENTER);
