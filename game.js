@@ -71,7 +71,7 @@ function drawGame() {
     fill("black");
     circle(30, 30, 45);
 
-    image(ladderImg, 500, 300, 400, 400);
+    image(ladderImg, 400, 300, 400, 400);
   }
 
   if (titleHard) {
@@ -157,6 +157,7 @@ function gameMousePressed() {
       titleMedium = true;
       titleHard = false;
       opac = 25;
+      randomBg = color(255, 255, 255);
     } else if (buttonClicks >= 6 && buttonClicks <= 9) {
       titleEasy = false;
       titleMedium = false;
