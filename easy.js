@@ -5,6 +5,8 @@
 // and interact with the button on the game screen.
 // Keeping this in one object makes it easier to move,
 // resize, or restyle the button later.
+let randomBg = (240, 230, 140);
+
 const gameBtn = {
   x: 400, // x position (centre of the button)
   y: 550, // y position (centre of the button)
@@ -52,4 +54,33 @@ function randomButton() {
   gameBtn.h = random(5, 150); // random button height
   gameBtn.x = random(gameBtn.w / 2, width - gameBtn.w / 2); // random x position
   gameBtn.y = random(gameBtn.h / 2, height - gameBtn.h / 2); // random y position
+}
+
+let opac = 120;
+
+// This function is responsible *only* for drawing the button.
+// It does NOT handle clicks or game logic.
+function drawGameButton({ x, y, w, h }) {
+  rectMode(CENTER);
+
+  // Check if the mouse is hovering over the button
+  // isHover() is defined in main.js so it can be shared
+  const hover = isHover({ x, y, w, h });
+
+  noStroke();
+
+  // This gives visual feedback to the player
+  fill(buttonOpacity(opac));
+
+  // Draw the button rectangle
+  rect(x, y, w, h, 14); // last value = rounded corners
+}
+
+function buttonOpacity(opacity) {
+  return color(
+    red(randomBg) * 0.5,
+    green(randomBg) * 0.5,
+    blue(randomBg) * 0.5,
+    opacity,
+  );
 }
