@@ -146,7 +146,7 @@ function gameMousePressed() {
     } else if (buttonClicks >= 3 && buttonClicks <= 6) {
       titleEasy = false;
       titleMedium = true;
-      opac = 60;
+      opac = 25;
     } else if (buttonClicks >= 6 && buttonClicks <= 10) {
       titleEasy = false;
       titleMedium = false;
@@ -165,37 +165,6 @@ function gameMousePressed() {
     currentScreen = "lose";
     totalClicks = 0;
     buttonClicks = 0;
-  }
-}
-
-// ------------------------------
-// Keyboard input for this screen
-// ------------------------------
-// Allows keyboard-only interaction (accessibility + design)
-function gameKeyPressed() {
-  // ENTER key triggers the same behaviour as clicking the button
-  if (keyCode === ENTER) {
-    triggerRandomOutcome();
-  }
-}
-
-// ------------------------------
-// Game logic: win or lose
-// ------------------------------
-// This function decides what happens next in the game.
-// It does NOT draw anything.
-function triggerRandomOutcome() {
-  // random() returns a value between 0 and 1
-  // Here we use a 50/50 chance:
-  // - less than 0.5 → win
-  // - 0.5 or greater → lose
-  //
-  // You can bias this later, for example:
-  // random() < 0.7 → 70% chance to win
-  if (random() < 0.5) {
-    currentScreen = "win";
-  } else {
-    currentScreen = "lose";
   }
 }
 

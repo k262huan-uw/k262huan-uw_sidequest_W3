@@ -32,6 +32,7 @@ function drawLose() {
 // (no buttons needed for this simple end state)
 function loseMousePressed() {
   currentScreen = "start";
+  buttonClicks = 0;
 }
 
 // ------------------------------
@@ -41,5 +42,6 @@ function loseMousePressed() {
 function loseKeyPressed() {
   if (key === "r" || key === "R") {
     currentScreen = "start";
+    buttonClicks = 0;
   }
 }

@@ -35,6 +35,7 @@ function drawWin() {
 // Any mouse click returns the player to the start screen
 function winMousePressed() {
   currentScreen = "start";
+  buttonClicks = 0;
 }
 
 // ------------------------------------------------------------
@@ -44,5 +45,6 @@ function winMousePressed() {
 function winKeyPressed() {
   if (key === "r" || key === "R") {
     currentScreen = "start";
+    buttonClicks = 0;
   }
 }
