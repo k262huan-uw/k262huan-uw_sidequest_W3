@@ -45,10 +45,10 @@ function drawGame() {
     text("Find Me - EASY MODE", width / 2, 160);
 
     textSize(18);
-    text("Find the button to move on to the next level.", width / 2, 210);
+    text("Find the button 3 times to unlock the door.", width / 2, 210);
 
-    fill("pink");
-    rect(width / 2, 760, 60, 80);
+    fill("white"); // coloured rect white
+    rect(width / 2, 760, 60, 80); // created a door
   }
 
   if (titleMedium) {
