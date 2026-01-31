@@ -31,7 +31,7 @@ let currentScreen = "start"; // "start" | "instr" | "game" | "win" | "lose"
 let ladderImg;
 
 function preload() {
-  ladderImg = loadImage("libraries/images/ladder.png");
+  ladderImg = loadImage("ladder.png");
 }
 
 function setup() {
