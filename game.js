@@ -27,7 +27,7 @@ const gameBtn = {
 
 let randomBg = (240, 230, 140);
 let levelText = false;
-let titleText = true;
+let titleEasy = true;
 
 function drawGame() {
   // Set background colour for the game screen
@@ -35,7 +35,7 @@ function drawGame() {
 
   // ---- Title and instructions text ----
 
-  if (titleText) {
+  if (titleEasy) {
     fill(0); // black text
     textSize(32);
     textAlign(CENTER, CENTER);
@@ -110,8 +110,11 @@ function gameMousePressed() {
     randomButton(); // randomizes button position once mouse is clicked
     randomBg = color(random(0, 255), random(0, 255), random(0, 255)); // randomizes background colour once the button is pressed
     levelText = true;
-    titleText = false;
 
+    if (buttonClicks <= 3) {
+      titleEasy = false;
+      fill(buttonOpacity(30));
+    }
     if (buttonClicks === winClicks) {
       currentScreen = "win";
       totalClicks = 0;
@@ -162,8 +165,4 @@ function randomButton() {
   gameBtn.h = random(5, 150); // random button height
   gameBtn.x = random(gameBtn.w / 2, width - gameBtn.w / 2); // random x position
   gameBtn.y = random(gameBtn.h / 2, height - gameBtn.h / 2); // random y position
-}
-
-function easyMode() {
-  fill();
 }
