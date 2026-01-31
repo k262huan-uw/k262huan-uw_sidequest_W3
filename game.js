@@ -29,6 +29,11 @@ let randomBg = (240, 230, 140);
 let titleEasy = true;
 let titleMedium = false;
 let titleHard = false;
+let ladder;
+
+function preload() {
+  ladder = loadImage("ladder.png");
+}
 
 function drawGame() {
   // Set background colour for the game screen
@@ -62,10 +67,16 @@ function drawGame() {
     text("Find Me - MEDIUM MODE", width / 2, 160);
 
     textSize(18);
-    text("Welcome to the White Room. Choose your path..", width / 2, 210);
+    text(
+      "Welcome to the White Room. Two paths lie ahead.. Will you climb the Ladder or descend down the Hole",
+      width / 2,
+      210,
+    );
 
     fill("black");
     circle(30, 30, 45);
+
+    Image(ladder, 600, 400, 800, 800);
   }
 
   if (titleHard) {
