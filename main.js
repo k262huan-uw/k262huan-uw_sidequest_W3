@@ -29,9 +29,13 @@ let currentScreen = "start"; // "start" | "instr" | "game" | "win" | "lose"
 // This is where you usually set canvas size and initial settings.
 
 let ladderImg;
+let crownImg;
+let orangeImg;
 
 function preload() {
   ladderImg = loadImage("libraries/images/ladder.png");
+  crownImg = loadImage("libraries/images/crown.png");
+  orangeImg = loadImage("libraries/images/orange.png");
 }
 
 function setup() {
