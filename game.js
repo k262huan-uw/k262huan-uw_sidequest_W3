@@ -50,7 +50,7 @@ function drawGame() {
     fill("white"); // coloured rect white
     rect(width / 2, 760, 80, 120); // created a door
     fill("black");
-    rect(380, 780, 5, 10); // created a door
+    rect(380, 750, 5, 10); // created a door
   }
 
   if (titleMedium) {
