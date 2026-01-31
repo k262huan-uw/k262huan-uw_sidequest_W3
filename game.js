@@ -48,7 +48,7 @@ function drawGame() {
   if (levelText) {
     fill(0); // black text
     textSize(18);
-    text("Congrats! You've unlocked the next level.", width / 2, 210);
+    text("Congrats! You've unlocked the next level.", width / 2, 187);
   }
 
   // ---- Draw the button ----
