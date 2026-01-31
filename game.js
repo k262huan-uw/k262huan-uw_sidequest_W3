@@ -76,7 +76,8 @@ function drawGame() {
 // Button drawing helper
 // ------------------------------
 
-let opac = 30;
+let opac = 120;
+
 // This function is responsible *only* for drawing the button.
 // It does NOT handle clicks or game logic.
 function drawGameButton({ x, y, w, h }) {
