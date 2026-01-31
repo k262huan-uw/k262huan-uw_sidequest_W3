@@ -5,7 +5,7 @@ function drawHard() {
   fill(0); // black text
   textSize(32);
   textAlign(CENTER, CENTER);
-  text("Find Me - HARD MODE", width / 2, 160);
+  text("Find Crown", width / 2, 160);
 
   textSize(18);
   text("Look for the crown to find...", width / 2, 210);
@@ -14,7 +14,7 @@ function drawHard() {
 }
 
 function hardMousePressed() {
-  if (mouseX > 38 && mouseX < 56 && mouseY > 33 && mouseY < 49) {
+  if (mouseX > 220 && mouseX < 228 && mouseY > 296.5 && mouseY < 304) {
     currentScreen = "win";
   }
 }

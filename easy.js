@@ -20,7 +20,7 @@ function drawEasy() {
   fill(0); // black text
   textSize(32);
   textAlign(CENTER, CENTER);
-  text("Find Me - EASY MODE", width / 2, 160);
+  text("Find Button", width / 2, 160);
 
   textSize(18);
   text("Find the button 3 times to unlock the door.", width / 2, 210);

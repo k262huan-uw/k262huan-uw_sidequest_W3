@@ -5,7 +5,7 @@ function drawMedium() {
   fill(0); // black text
   textSize(32);
   textAlign(CENTER, CENTER);
-  text("Find Me - The White Room", width / 2, 160);
+  text("Find ?", width / 2, 160);
 
   textSize(18);
   text("Two paths lie ahead..", width / 2, 210);
