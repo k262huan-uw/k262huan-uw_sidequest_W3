@@ -76,7 +76,7 @@ function drawGame() {
 // Button drawing helper
 // ------------------------------
 
-let opac = 30
+let opac = 30;
 // This function is responsible *only* for drawing the button.
 // It does NOT handle clicks or game logic.
 function drawGameButton({ x, y, w, h }) {
@@ -126,7 +126,7 @@ function gameMousePressed() {
 
     if (buttonClicks <= 3) {
       titleEasy = false;
-    } else if (buttonClicks >= 3 && <= 6) {
+    } else if (buttonClicks >= 3 && buttonClicks <= 6) {
       titleEasy = true;
       titleMedium = false;
       opac = 10;
