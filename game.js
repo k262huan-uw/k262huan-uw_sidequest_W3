@@ -71,7 +71,7 @@ function drawGame() {
     fill("black");
     circle(30, 30, 45);
 
-    image(ladderImg, 600, 400, 100, 300);
+    image(ladderImg, 600, 400, 300, 800);
   }
 
   if (titleHard) {
