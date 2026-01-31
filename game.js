@@ -26,23 +26,29 @@ const gameBtn = {
 // when currentScreen === "game"
 
 let randomBg = (240, 230, 140);
+let levelText = false;
+let titleText = true;
 
 function drawGame() {
   // Set background colour for the game screen
   background(randomBg);
 
   // ---- Title and instructions text ----
-  fill(0); // black text
-  textSize(32);
-  textAlign(CENTER, CENTER);
-  text("Game Screen", width / 2, 160);
 
-  textSize(18);
-  text(
-    "Click the button (or press ENTER) for a random result.",
-    width / 2,
-    210,
-  );
+  if (titleText) {
+    fill(0); // black text
+    textSize(32);
+    textAlign(CENTER, CENTER);
+    text("Find Me", width / 2, 160);
+
+    textSize(18);
+    text("Find the button to move on to the next level.", width / 2, 210);
+  }
+
+  if (levelText) {
+    textSize(18);
+    text("Congrats! You've unlocked the next level.", width / 2, 210);
+  }
 
   // ---- Draw the button ----
   // We pass the button object to a helper function
@@ -101,8 +107,8 @@ function gameMousePressed() {
     buttonClicks++;
     randomButton(); // randomizes button position once mouse is clicked
     randomBg = color(random(0, 255), random(0, 255), random(0, 255)); // randomizes background colour once the button is pressed
-
-    text("Congrats, you found the button", width / 2, 210);
+    levelText = true;
+    titleText = false;
 
     if (buttonClicks === winClicks) {
       currentScreen = "win";
