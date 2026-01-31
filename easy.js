@@ -26,7 +26,7 @@ function easyMousePressed() {
     randomButton(); // randomizes button position once mouse is clicked
     randomBg = color(random(0, 255), random(0, 255), random(0, 255)); // randomizes background colour once the button is pressed
 
-    if ((easyClicks) => 3) {
+    if (easyClicks >= 3) {
       easyClicks = 0;
       currentScreen = "medium";
     }
