@@ -62,7 +62,10 @@ function drawGame() {
     text("Find Me - MEDIUM MODE", width / 2, 160);
 
     textSize(18);
-    text("Find the button to move on to the next level.", width / 2, 210);
+    text("Welcome to the White Room. Choose your path..", width / 2, 210);
+
+    fill("black");
+    circle(30, 30, 45);
   }
 
   if (titleHard) {
