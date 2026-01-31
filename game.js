@@ -29,6 +29,7 @@ let randomBg = (240, 230, 140);
 let levelText = false;
 let titleEasy = true;
 let titleMedium = false;
+let titleHard = false;
 
 function drawGame() {
   // Set background colour for the game screen
@@ -48,6 +49,7 @@ function drawGame() {
 
   if (titleMedium) {
     titleEasy = false;
+    titleHard = false;
     fill(0); // black text
     textSize(32);
     textAlign(CENTER, CENTER);
@@ -56,6 +58,19 @@ function drawGame() {
     textSize(18);
     text("Find the button to move on to the next level.", width / 2, 210);
   }
+
+  if (titleHard) {
+    titleEasy = false;
+    titleMedium = false;
+    fill(0); // black text
+    textSize(32);
+    textAlign(CENTER, CENTER);
+    text("Find Me - HARD MODE", width / 2, 160);
+
+    textSize(18);
+    text("Find the button to win", width / 2, 210);
+  }
+
   if (levelText) {
     fill(0); // black text
     textSize(18);
@@ -131,7 +146,12 @@ function gameMousePressed() {
     } else if (buttonClicks >= 3 && buttonClicks <= 6) {
       titleEasy = false;
       titleMedium = true;
-      opac = 10;
+      opac = 60;
+    } else if (buttonClicks >= 6 && buttonClicks <= 10) {
+      titleEasy = false;
+      titleMedium = false;
+      titleHard = true;
+      opac = 7;
     }
 
     if (buttonClicks === winClicks) {
