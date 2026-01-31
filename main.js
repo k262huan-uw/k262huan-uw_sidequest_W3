@@ -83,7 +83,9 @@ function mousePressed() {
   // Each screen *may* define a mouse handler:
   // start.js         → startMousePressed()
   // instructions.js  → instrMousePressed()
-  // game.js          → gameMousePressed()
+  // easy.js          → easyMousePressed()
+  // medium.js          → mediumMousePressed()
+  // hard.js          → hardMousePressed()
   // win.js           → winMousePressed()
   // lose.js          → loseMousePressed()
 
