@@ -28,6 +28,7 @@ const gameBtn = {
 let randomBg = (240, 230, 140);
 let levelText = false;
 let titleEasy = true;
+let titleMedium = true;
 
 function drawGame() {
   // Set background colour for the game screen
@@ -45,6 +46,16 @@ function drawGame() {
     text("Find the button to move on to the next level.", width / 2, 210);
   }
 
+  if (titleMedium) {
+    titleEasy = false;
+    fill(0); // black text
+    textSize(32);
+    textAlign(CENTER, CENTER);
+    text("Find Me - MEDIUM MODE", width / 2, 160);
+
+    textSize(18);
+    text("Find the button to move on to the next level.", width / 2, 210);
+  }
   if (levelText) {
     fill(0); // black text
     textSize(18);
@@ -64,6 +75,8 @@ function drawGame() {
 // ------------------------------
 // Button drawing helper
 // ------------------------------
+
+let opac = 30
 // This function is responsible *only* for drawing the button.
 // It does NOT handle clicks or game logic.
 function drawGameButton({ x, y, w, h }) {
@@ -76,7 +89,7 @@ function drawGameButton({ x, y, w, h }) {
   noStroke();
 
   // This gives visual feedback to the player
-  fill(buttonOpacity(10));
+  fill(buttonOpacity(opac));
 
   // Draw the button rectangle
   rect(x, y, w, h, 14); // last value = rounded corners
@@ -113,8 +126,12 @@ function gameMousePressed() {
 
     if (buttonClicks <= 3) {
       titleEasy = false;
-      fill(buttonOpacity(30));
+    } else if (buttonClicks >= 3 && <= 6) {
+      titleEasy = true;
+      titleMedium = false;
+      opac = 10;
     }
+
     if (buttonClicks === winClicks) {
       currentScreen = "win";
       totalClicks = 0;
