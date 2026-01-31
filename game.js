@@ -151,7 +151,7 @@ function gameMousePressed() {
       titleEasy = false;
       titleMedium = false;
       titleHard = true;
-      opac = 7;
+      opac = 140;
     } else {
       titleEasy = true;
       titleMedium = false;
