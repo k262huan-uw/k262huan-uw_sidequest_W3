@@ -39,10 +39,9 @@ function drawGame() {
     fill(0); // black text
     textSize(32);
     textAlign(CENTER, CENTER);
-    text("Find Me", width / 2, 160);
+    text("Find Me - EASY MODE", width / 2, 160);
 
     textSize(18);
-    text("EASY MODE", width / 2, 190);
     text("Find the button to move on to the next level.", width / 2, 210);
   }
 
