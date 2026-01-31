@@ -32,7 +32,6 @@ function drawGame() {
   background(randomBg);
 
   // start in easy
-  currentScreen = "easy";
   // ---- Draw the button ----
   // We pass the button object to a helper function
   drawGameButton(gameBtn);

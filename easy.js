@@ -1,3 +1,17 @@
+// ------------------------------
+// Button data
+// ------------------------------
+// This object stores all the information needed to draw
+// and interact with the button on the game screen.
+// Keeping this in one object makes it easier to move,
+// resize, or restyle the button later.
+const gameBtn = {
+  x: 400, // x position (centre of the button)
+  y: 550, // y position (centre of the button)
+  w: 260, // width
+  h: 90, // height
+};
+
 function drawEasy() {
   background(randomBg);
 
