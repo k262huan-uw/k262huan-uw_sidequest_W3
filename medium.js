@@ -36,10 +36,10 @@ function mediumMousePressed() {
   }
 
   if (
-    mouseX > ladder.x &&
-    mouseX < ladder.x + ladder.w &&
-    mouseY > ladder.y &&
-    mouseY < ladder.y + ladder.h
+    mouseX > 150 &&
+    mouseX < 150 + 400 &&
+    mouseY > 400 &&
+    mouseY < 400 + 400
   ) {
     currentScreen = "hard";
   }
