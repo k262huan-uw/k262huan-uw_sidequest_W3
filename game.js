@@ -125,7 +125,7 @@ function gameMousePressed() {
     randomBg = color(random(0, 255), random(0, 255), random(0, 255)); // randomizes background colour once the button is pressed
     levelText = true;
 
-    if (buttonClicks <= 3) {
+    if (buttonClicks < 3) {
       titleEasy = true;
       titleMedium = false;
     } else if (buttonClicks >= 3 && buttonClicks <= 6) {
