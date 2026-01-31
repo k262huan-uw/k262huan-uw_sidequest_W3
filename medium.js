@@ -1,16 +1,3 @@
-const hole = {
-  x: 500,
-  y: 450,
-  r: 75,
-};
-
-const ladder = {
-  x: 100,
-  y: 280,
-  w: 400,
-  h: 400,
-};
-
 function drawMedium() {
   background("white");
 
@@ -31,7 +18,7 @@ function drawMedium() {
 }
 
 function mediumMousePressed() {
-  if (dist(mouseX, mouseY, hole.x, hole.y) < hole.r) {
+  if (dist(mouseX, mouseY, 500, 450) < 75) {
     currentScreen = "lose";
   }
 

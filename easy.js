@@ -30,8 +30,8 @@ function drawEasy() {
   fill("black");
   rect(375, 755, 5, 10); // created a door handle
 
-  cursor(isHover(gameBtn) ? HAND : ARROW);
   drawGameButton(gameBtn);
+  cursor(isHover(gameBtn) ? HAND : ARROW);
 }
 
 let easyClicks = 0;
