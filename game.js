@@ -62,11 +62,15 @@ function drawGame() {
     text("Find Me - MEDIUM MODE", width / 2, 160);
 
     textSize(18);
-    text("Welcome to the White Room. Two paths lie ahead..", width / 2, 210);
-    text("Will you climb the Ladder or descend down the Hole", width / 2, 230);
+    text("Welcome to the White Room! Two paths lie ahead..", width / 2, 210);
+    text(
+      "Will you climb the Ladder or descend into the Hole?..",
+      width / 2,
+      230,
+    );
 
     fill("black");
-    circle(500, 400, 150);
+    circle(500, 450, 150);
 
     image(ladderImg, 0, 300, 400, 400);
   }
