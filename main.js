@@ -54,7 +54,6 @@ function draw() {
   // Each screen file defines its own draw function:
   //   start.js         → drawStart()
   //   instructions.js  → drawInstr()
-  //   game.js          → drawGame()
   //   easy.js          → drawEasy()
   //   medium.js        → drawMedium()
   //   hard.js          → drawHard()
@@ -63,10 +62,9 @@ function draw() {
 
   if (currentScreen === "start") drawStart();
   else if (currentScreen === "instr") drawInstr();
-  else if (currentScreen === "game") drawGame();
   else if (currentScreen === "easy") drawEasy();
   else if (currentScreen === "medium") drawMedium();
-  else if (currentScreen === "hard") drawhard();
+  else if (currentScreen === "hard") drawHard();
   else if (currentScreen === "win") drawWin();
   else if (currentScreen === "lose") drawLose();
 
@@ -91,7 +89,6 @@ function mousePressed() {
 
   if (currentScreen === "start") startMousePressed();
   else if (currentScreen === "instr") instrMousePressed();
-  else if (currentScreen === "game") gameMousePressed();
   else if (currentScreen === "easy") easyMousePressed();
   else if (currentScreen === "medium") mediumMousePressed();
   else if (currentScreen === "hard") hardMousePressed();
@@ -115,7 +112,6 @@ function keyPressed() {
 
   if (currentScreen === "start") startKeyPressed();
   else if (currentScreen === "instr") instrKeyPressed();
-  else if (currentScreen === "game") gameKeyPressed?.();
   else if (currentScreen === "win") winKeyPressed?.();
   else if (currentScreen === "lose") loseKeyPressed?.();
 }
