@@ -126,7 +126,7 @@ function gameMousePressed() {
     levelText = true;
 
     if (buttonClicks <= 3) {
-      titleEasy = false;
+      titleEasy = true;
     } else if (buttonClicks <= 3 && buttonClicks <= 6) {
       titleEasy = false;
       titleMedium = true;
