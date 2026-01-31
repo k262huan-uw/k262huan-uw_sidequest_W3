@@ -1,9 +1,5 @@
-let squareSize = 10;
-let x = width / 2;
-let y = height / 2;
-
 function drawHard() {
-  background("134, 221, 247"); // light blue
+  background(134, 221, 247); // light blue
 
   // title
   fill(0); // black text
@@ -15,16 +11,6 @@ function drawHard() {
   text("Look for the crown to find...", width / 2, 210);
 
   image(crownImg, 200, 280, 50, 50);
-
-  while (10 <= width) {
-    let colour = map(width, 0, height, 320, 260);
-    fill(colour, 100, 100);
-    rect(x - 50, y - 50, width);
-
-    width -= squareSize;
-    x += 5;
-    y += 5;
-  }
 }
 
 function hardMousePressed() {
