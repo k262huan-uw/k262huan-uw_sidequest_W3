@@ -29,6 +29,11 @@ let randomBg = (240, 230, 140);
 let titleEasy = true;
 let titleMedium = false;
 let titleHard = false;
+let ladderImg;
+
+function preload() {
+  ladderImg = loadImage("libraries/images/ladder.png");
+}
 
 function drawGame() {
   // Set background colour for the game screen
