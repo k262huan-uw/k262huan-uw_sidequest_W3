@@ -58,6 +58,8 @@ function draw() {
   //   win.js           → drawWin()
   //   lose.js          → drawLose()
 
+  image(ladderImg, 600, 400, 80, 120);
+
   if (currentScreen === "start") drawStart();
   else if (currentScreen === "instr") drawInstr();
   else if (currentScreen === "game") drawGame();
