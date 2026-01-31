@@ -8,9 +8,13 @@ function drawHard() {
   text("Find Crown", width / 2, 160);
 
   textSize(18);
-  text("Look for the crown to find...", width / 2, 210);
+  text("Click on the correct crown to find...", width / 2, 210);
 
   image(crownImg, 200, 280, 50, 50);
+  image(crownImg, 700, 500, 100, 100);
+  image(crownImg, 350, 330, 50, 50);
+  image(crownImg, 550, 700, 75, 75);
+  image(crownImg, 100, 750, 120, 120);
 }
 
 function hardMousePressed() {
