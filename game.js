@@ -42,6 +42,7 @@ function drawGame() {
     text("Find Me", width / 2, 160);
 
     textSize(18);
+    text("EASY MODE", width / 2, 190);
     text("Find the button to move on to the next level.", width / 2, 210);
   }
 
@@ -66,7 +67,7 @@ function drawGame() {
 // ------------------------------
 // This function is responsible *only* for drawing the button.
 // It does NOT handle clicks or game logic.
-function drawGameButton({ x, y, w, h, label }) {
+function drawGameButton({ x, y, w, h }) {
   rectMode(CENTER);
 
   // Check if the mouse is hovering over the button
@@ -75,20 +76,21 @@ function drawGameButton({ x, y, w, h, label }) {
 
   noStroke();
 
-  // matches the background colour to the button colour but with a different opacity
-  let buttonCol = color(
-    red(randomBg) * 0.5,
-    green(randomBg) * 0.5,
-    blue(randomBg) * 0.5,
-    10,
-  );
   // This gives visual feedback to the player
-  fill(buttonCol);
+  fill(buttonOpacity(10));
 
   // Draw the button rectangle
   rect(x, y, w, h, 14); // last value = rounded corners
 }
 
+function buttonOpacity(opacity) {
+  return color(
+    red(randomBg) * 0.5,
+    green(randomBg) * 0.5,
+    blue(randomBg) * 0.5,
+    opacity,
+  );
+}
 // ------------------------------
 // Mouse input for this screen
 // ------------------------------
@@ -161,4 +163,8 @@ function randomButton() {
   gameBtn.h = random(5, 150); // random button height
   gameBtn.x = random(gameBtn.w / 2, width - gameBtn.w / 2); // random x position
   gameBtn.y = random(gameBtn.h / 2, height - gameBtn.h / 2); // random y position
+}
+
+function easyMode() {
+  fill();
 }
