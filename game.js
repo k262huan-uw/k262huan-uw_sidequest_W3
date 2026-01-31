@@ -45,7 +45,7 @@ function drawGame() {
     text("Find the button to move on to the next level.", width / 2, 210);
   }
 
-  if (levelText) {
+  if (!levelText) {
     textSize(18);
     text("Congrats! You've unlocked the next level.", width / 2, 210);
   }
