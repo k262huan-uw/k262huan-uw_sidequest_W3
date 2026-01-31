@@ -149,12 +149,11 @@ function gameMousePressed() {
       titleEasy = false;
       titleMedium = true;
       opac = 25;
-    } else if (buttonClicks >= 6 && buttonClicks <= 10) {
+    } else if (buttonClicks >= 6 && buttonClicks === 10) {
       titleEasy = false;
       titleMedium = false;
       titleHard = true;
       opac = 140;
-      buttonClicks = 0;
     } else {
       titleEasy = true;
       titleMedium = false;
