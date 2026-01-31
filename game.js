@@ -66,9 +66,9 @@ function drawGame() {
     text("Will you climb the Ladder or descend down the Hole", width / 2, 230);
 
     fill("black");
-    circle(500, 90, 400);
+    circle(500, 50, 700);
 
-    image(ladderImg, 200, 300, 400, 400);
+    image(ladderImg, 0, 300, 400, 400);
   }
 
   if (titleHard) {
