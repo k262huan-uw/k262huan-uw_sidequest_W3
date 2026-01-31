@@ -48,7 +48,7 @@ function drawGame() {
     text("Find the button to move on to the next level.", width / 2, 210);
 
     fill("pink");
-    rect(width / 2 - 30, 740, 60, 80);
+    rect(width / 2, 760, 60, 80);
   }
 
   if (titleMedium) {
