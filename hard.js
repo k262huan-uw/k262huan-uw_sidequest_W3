@@ -13,7 +13,7 @@ function drawHard() {
   image(crownImg, 200, 280, 50, 50); // click to win
   image(crownImg, 600, 500, 100, 100);
   image(crownImg, 350, 330, 300, 300);
-  image(crownImg, 550, 700, 75, 75);
+  image(crownImg, 550, 600, 505, 505);
   image(crownImg, 100, 750, 120, 120);
 }
 
