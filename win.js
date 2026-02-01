@@ -26,9 +26,9 @@ function drawWin() {
 
   // Instruction text
   textSize(20);
-  text("Congrats! You found the King Orange.", width / 2, 300);
-  text("Click or press R to return to Start.", width / 2, 360);
-  image(orangeImg, width / 2, height / 2, 300, 300);
+  text("Congrats! You found the King Orange.", width / 2, 360);
+  text("Click or press R to return to Start.", width / 2, 410);
+  image(orangeImg, 250, 350, 300, 300);
 }
 
 // ------------------------------------------------------------

@@ -5,7 +5,7 @@
 // and interact with the button on the game screen.
 // Keeping this in one object makes it easier to move,
 // resize, or restyle the button later.
-let randomBg;
+let randomBg = (240, 230, 140);
 
 const gameBtn = {
   x: 400, // x position (centre of the button)
@@ -31,6 +31,7 @@ function drawEasy() {
   rect(375, 755, 5, 10); // created a door handle
 
   drawGameButton(gameBtn);
+  cursor(isHover(gameBtn) ? HAND : ARROW);
 }
 
 let easyClicks = 0;
@@ -64,6 +65,8 @@ function drawGameButton({ x, y, w, h }) {
 
   // Check if the mouse is hovering over the button
   // isHover() is defined in main.js so it can be shared
+  const hover = isHover({ x, y, w, h });
+
   noStroke();
 
   // This gives visual feedback to the player

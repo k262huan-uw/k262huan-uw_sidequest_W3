@@ -11,6 +11,11 @@ function drawHard() {
   text("Click on the correct crown to find...", width / 2, 210);
 
   image(crownImg, 200, 280, 50, 50); // click to win
+  image(crownImg, 400, 500, 100, 100);
+  image(crownImg, 0, 400, 505, 505);
+  image(crownImg, 0, 100, 100, 100);
+  image(crownImg, 100, 0, 700, 700);
+  image(crownImg, 500, 340, 505, 505);
 }
 
 function hardMousePressed() {
