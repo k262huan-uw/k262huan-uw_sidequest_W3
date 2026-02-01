@@ -29,7 +29,7 @@ function drawInstr() {
     "Press the buttons/images/shapes.\n" +
     "You have a chance to find the hidden ???";
 
-  text(lines, width / 2, 160);
+  text(lines, width / 2, 200);
 
   // ---- Back button ----
   // This button lets the player return to the start screen

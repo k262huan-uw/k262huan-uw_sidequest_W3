@@ -20,11 +20,9 @@ function drawLose() {
   textSize(40);
   text("You Lose!", width / 2, 300);
 
-  textSize(20);
-  text("Unfortunately, you hit the ground too hard :(", width / 2, 360);
   // Instruction text
   textSize(20);
-  text("Click or press R to return to Start.", width / 2, 410);
+  text("Click or press R to return to Start.", width / 2, 360);
 }
 
 // ------------------------------

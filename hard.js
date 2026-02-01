@@ -21,5 +21,13 @@ function drawHard() {
 function hardMousePressed() {
   if (mouseX > 220 && mouseX < 228 && mouseY > 296.5 && mouseY < 304) {
     currentScreen = "win";
+  } else if (
+    (mouseX > 438 && mouseX < 456 && mouseY > 533 && mouseY < 549) ||
+    (mouseX > 192 && mouseX < 283 && mouseY > 567 && mouseY < 647) ||
+    (mouseX > 38 && mouseX < 56 && mouseY > 133 && mouseY < 149) ||
+    (mouseX > 366 && mouseX < 492 && mouseY > 231 && mouseY < 343) ||
+    (mouseX > 693 && mouseX < 783 && mouseY > 507 && mouseY < 587)
+  ) {
+    currentScreen = "lose";
   }
 }
