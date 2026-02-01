@@ -31,7 +31,6 @@ function drawEasy() {
   rect(375, 755, 5, 10); // created a door handle
 
   drawGameButton(gameBtn);
-  cursor(isHover(gameBtn) ? HAND : ARROW);
 }
 
 let easyClicks = 0;
@@ -65,8 +64,6 @@ function drawGameButton({ x, y, w, h }) {
 
   // Check if the mouse is hovering over the button
   // isHover() is defined in main.js so it can be shared
-  const hover = isHover({ x, y, w, h });
-
   noStroke();
 
   // This gives visual feedback to the player

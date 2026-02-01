@@ -121,25 +121,3 @@ function keyPressed() {
   else if (currentScreen === "win") winKeyPressed?.();
   else if (currentScreen === "lose") loseKeyPressed?.();
 }
-
-// ------------------------------------------------------------
-// Shared helper function: isHover()
-// ------------------------------------------------------------
-//
-// Many screens have buttons.
-// This helper checks whether the mouse is inside a rectangle.
-//
-// Important: our buttons are drawn using rectMode(CENTER),
-// meaning x,y is the CENTRE of the rectangle.
-// So we check mouseX and mouseY against half-width/half-height bounds.
-//
-// Input:  an object with { x, y, w, h }
-// Output: true if mouse is over the rectangle, otherwise false
-function isHover({ x, y, w, h }) {
-  return (
-    mouseX > x - w / 2 && // mouse is right of left edge
-    mouseX < x + w / 2 && // mouse is left of right edge
-    mouseY > y - h / 2 && // mouse is below top edge
-    mouseY < y + h / 2 // mouse is above bottom edge
-  );
-}
