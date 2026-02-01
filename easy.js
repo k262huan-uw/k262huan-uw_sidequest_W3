@@ -5,7 +5,7 @@
 // and interact with the button on the game screen.
 // Keeping this in one object makes it easier to move,
 // resize, or restyle the button later.
-let randomBg = (240, 230, 140);
+let randomBg;
 
 const gameBtn = {
   x: 400, // x position (centre of the button)
