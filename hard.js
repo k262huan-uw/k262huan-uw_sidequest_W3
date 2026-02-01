@@ -10,6 +10,7 @@ function drawHard() {
   textSize(18);
   text("Click on the correct crown to find...", width / 2, 210);
 
+<<<<<<< HEAD
   image(crownImg, 200, 280, 50, 50); // click to win
   image(crownImg, 400, 500, 100, 100);
   image(crownImg, 350, 330, 300, 300);
@@ -18,6 +19,13 @@ function drawHard() {
   image(crownImg, -20, 100, 700, 700);
   image(crownImg, -20, 0, 700, 700);
   image(crownImg, -60, 300, 500, 500);
+=======
+  image(crownImg, 200, 280, 50, 50);
+  image(crownImg, 700, 500, 100, 100);
+  image(crownImg, 350, 330, 50, 50);
+  image(crownImg, 550, 700, 75, 75);
+  image(crownImg, 100, 750, 120, 120);
+>>>>>>> parent of cc39caf (change img size)
 }
 
 function hardMousePressed() {
