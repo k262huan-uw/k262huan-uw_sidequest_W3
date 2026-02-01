@@ -34,7 +34,7 @@ let orangeImg;
 
 function preload() {
   ladderImg = loadImage("libraries/images/ladder.png");
-  crownImg = loadImage("libraries/images/.png");
+  crownImg = loadImage("libraries/images/crown.png");
   orangeImg = loadImage("libraries/images/orange.png");
 }
 
