@@ -15,6 +15,8 @@ function drawHard() {
   image(crownImg, 350, 330, 300, 300);
   image(crownImg, 500, 400, 505, 505);
   image(crownImg, -20, 100, 700, 700);
+  image(crownImg, -20, 0, 700, 700);
+  mage(crownImg, -60, 300, 505, 505);
 }
 
 function hardMousePressed() {
