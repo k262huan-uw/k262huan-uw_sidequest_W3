@@ -13,8 +13,8 @@ function drawHard() {
   image(crownImg, 200, 280, 50, 50); // click to win
   image(crownImg, 400, 500, 100, 100);
   image(crownImg, 350, 330, 300, 300);
-  image(crownImg, 550, 400, 505, 505);
-  image(crownImg, 100, 450, 120, 120);
+  image(crownImg, 500, 400, 505, 505);
+  image(crownImg, 100, 450, 700, 700);
 }
 
 function hardMousePressed() {
