@@ -5,11 +5,11 @@ function drawMedium() {
   fill(0); // black text
   textSize(32);
   textAlign(CENTER, CENTER);
-  text("Find ?", width / 2, 160);
+  text("Congrats, you have unlocked the White Room", width / 2, 160);
 
   textSize(18);
-  text("Two paths lie ahead..", width / 2, 210);
-  text("Will you climb the Ladder or descend into the Hole?..", width / 2, 230);
+  text("Two paths lie ahead..", width / 2, 200);
+  text("Will you climb the ladder or descend into the hole?", width / 2, 230);
 
   fill("black");
   circle(500, 450, 150);

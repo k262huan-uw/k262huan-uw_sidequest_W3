@@ -20,10 +20,14 @@ function drawEasy() {
   fill(0); // black text
   textSize(32);
   textAlign(CENTER, CENTER);
-  text("Find Button", width / 2, 160);
+  text("FIND MEEEE!!!!!!", width / 2, 160);
 
   textSize(18);
-  text("Find the button 3 times to unlock the door.", width / 2, 210);
+  text(
+    "Search for the button 3 times to unlock the door to the next section.",
+    width / 2,
+    210,
+  );
 
   fill("white"); // coloured rect white
   rect(width / 2, 760, 80, 120); // created a door
@@ -56,7 +60,7 @@ function randomButton() {
   gameBtn.y = random(gameBtn.h / 2, height - gameBtn.h / 2); // random y position
 }
 
-let opac = 120;
+let opac = 30;
 
 // This function is responsible *only* for drawing the button.
 // It does NOT handle clicks or game logic.

@@ -5,7 +5,7 @@ function drawHard() {
   fill(0); // black text
   textSize(32);
   textAlign(CENTER, CENTER);
-  text("Find Crown", width / 2, 160);
+  text("You made it to the sky!", width / 2, 160);
 
   textSize(18);
   text("Click on the correct crown to find...", width / 2, 210);
