@@ -60,7 +60,7 @@ function startMousePressed() {
   const startBtn = { x: width / 2, y: 320, w: 240, h: 80 };
   const instrBtn = { x: width / 2, y: 430, w: 240, h: 80 };
 
-  // If START is clicked, go to the easy screen
+  // If START is clicked, go to the game screen
   if (isHover(startBtn)) {
     currentScreen = "easy";
   }
