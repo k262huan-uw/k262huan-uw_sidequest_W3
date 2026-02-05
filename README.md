@@ -6,7 +6,7 @@ GBDA302 Week 3 Side Quest 3
 
 ## Authors
 
-Karen Cochrane, David Han, and Katrina Huang
+Karen Cochrane, David Han, and Katrina Huang - k262huan - 21070864
 
 ---
 
@@ -43,6 +43,6 @@ Images (self-made)
 
 ## GenAI
 
-The code was written by Dr. Karen Cochrane but she used GenAI to write the comments. Used GenAI as a support tool to fix bugs.
+The code was written by Katrina Huang used Dr. Karen Cochrane starter code, she used GenAI to write the comments. Katrina Huang GenAI as a support tool to fix bugs.
 
 ---
