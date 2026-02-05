@@ -43,6 +43,6 @@ Images (self-made)
 
 ## GenAI
 
-The code was written by Katrina Huang used Dr. Karen Cochrane starter code, she used GenAI to write the comments. Katrina Huang GenAI as a support tool to fix bugs.
+Used Dr. Karen Cochrane starter code, she used GenAI to write the comments. Katrina Huang used GenAI as a support tool.
 
 ---
